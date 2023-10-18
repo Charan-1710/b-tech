@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil Engineering - Year 1</title>
+    <style>
+        /* CSS for styling the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0074d9;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .subject {
+            cursor: pointer;
+            border: none;
+            background-color: #f0f0f0;
+            text-align: left;
+            padding: 10px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .subject-content {
+            display: none;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Civil Engineering - Year 1</h1>
+    </header>
+    <div class="content">
+        <h2>About Civil Engineering</h2>
+        <p>
+            Civil Engineering is a discipline that deals with the design, construction, and maintenance of infrastructure projects such as buildings, roads, bridges, and more. Year 1 provides a foundation in core engineering principles.
+        </p>
+        <h2>Syllabus - Year 1</h2>
+        <button class="subject">Engineering Mathematics</button>
+        <div class="subject-content">
+            <ul>
+                <li>Calculus</li>
+                <li>Linear Algebra</li>
+                <li>Probability and Statistics</li>
+            </ul>
+        </div>
+        <button class="subject">Introduction to Civil Engineering</button>
+        <div class="subject-content">
+            <ul>
+                <li>Introduction to Civil Engineering Concepts</li>
+                <li>History and Significance</li>
+            </ul>
+        </div>
+        <button class="subject">Mechanics of Solids</button>
+        <div class="subject-content">
+            <ul>
+                <li>Statics</li>
+                <li>Strength of Materials</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // JavaScript for toggling subject content
+        const subjects = document.querySelectorAll('.subject');
+        subjects.forEach((subject) => {
+            subject.addEventListener('click', () => {
+                const content = subject.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

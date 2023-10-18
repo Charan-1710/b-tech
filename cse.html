@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science and Engineering</title>
+    <style>
+        /* CSS for styling the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0074d9;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .syllabus-year {
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .syllabus-content {
+            display: none;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Computer Science and Engineering</h1>
+    </header>
+    <div class="content">
+        <h2>About Computer Science and Engineering</h2>
+        <p>
+            Computer Science and Engineering is a branch of engineering that deals with the design, development, and maintenance of computer systems and software. It encompasses a wide range of topics including algorithms, data structures, programming languages, and more.
+        </p>
+        <h2>Syllabus</h2>
+        <div class="syllabus-year">Year 1</div>
+        <div class="syllabus-content">
+            <ul>
+                <li>Introduction to Programming</li>
+                <li>Calculus and Analytic Geometry</li>
+                <li>Physics for Engineers</li>
+                <!-- Add more courses here -->
+            </ul>
+        </div>
+        <div class="syllabus-year">Year 2</div>
+        <div class="syllabus-content">
+            <ul>
+                <li>Data Structures and Algorithms</li>
+                <li>Discrete Mathematics</li>
+                <li>Database Management</li>
+                <!-- Add more courses here -->
+            </ul>
+        </div>
+        <div class="syllabus-year">Year 3</div>
+        <div class="syllabus-content">
+            <ul>
+                <li>Operating Systems</li>
+                <li>Software Engineering</li>
+                <li>Computer Networks</li>
+                <!-- Add more courses here -->
+            </ul>
+        </div>
+        <div class="syllabus-year">Year 4</div>
+        <div class="syllabus-content">
+            <ul>
+                <li>Artificial Intelligence</li>
+                <li>Web Development</li>
+                <li>Capstone Project</li>
+                <!-- Add more courses here -->
+            </ul>
+        </div>
+    </div>
+    <script>
+        // JavaScript to toggle syllabus content
+        const syllabusYears = document.querySelectorAll('.syllabus-year');
+        syllabusYears.forEach((year) => {
+            year.addEventListener('click', () => {
+                const content = year.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

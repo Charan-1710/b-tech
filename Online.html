@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> B-Tech Study Hub </title>
+</head>
+<style>
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Welcome to One Day Batting</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cse">
+        <h2><li><a href="cse.html"> Computer Science & Engineering</a></li></h2>
+    </section>
+    
+    <section id="it">
+        <h2><li><a href="it.html">Information Technology</a></li></h2>
+    </section>
+
+    <section id="ece">
+        <h2><li><a href="ece.html">Electronics & Communication Engineering</a></li></h2>
+        
+    </section>
+
+    <section id="eee">
+        <h2><li><a href="eee.html">Electrical and Electronics Engineering</a></li></h2>
+        
+    </section>
+    
+    <section id="mech">
+        <h2><li><a href="mech.html">Mechanical Engineering</a></li></h2>
+    
+    </section>
+
+    <section id="civil">
+        <h2><li><a href="civil.html">Civil Engineering</a></li></h2>
+        
+    </section>
+
+    <section id="aids">
+        <h2><li><a href="aids.html">Artificial Intelligence and Data Science</a></li></h2>
+        
+    </section>
+
+    <section id="aiml">
+        <h2><li><a href="aiml.html">Artificial Intelligence and Machine Learing</a></li></h2>
+    
+    </section>
+
+    <section id="csbs">
+        <h2><li><a href="csbs.html">Computer Science and Business System</a></li></h2>
+        
+    </section>
+
+    <section>
+        <h3>About Us</h3>
+        <p>This website covers all B-tech branches' syllabus and model papers to help you prepare for exams and get good marks.</p>
+    </section>
+
+    <section>
+        <h3>Featured Content</h3>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Online Tation</p>
+    </footer>
+
+    <script src="script.js">
+        document.addEventListener("DOMContentLoaded", function () {
+    
+    function hideAllSections() {
+        const sections = document.querySelectorAll("section");
+        sections.forEach(function (section) {
+            section.style.display = "none";
+        });
+    }
+
+    
+    function showSection(sectionId) {
+        hideAllSections();
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.style.display = "block";
+        }
+    }
+
+
+    showSection("home");
+
+
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const sectionId = link.getAttribute("href").substring(1); // Remove the "#" symbol
+            showSection(sectionId);
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
